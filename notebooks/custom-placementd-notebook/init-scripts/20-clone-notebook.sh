@@ -6,6 +6,15 @@
 
 if [ "$(id -un)" = "jovyan" ]
 then
-    (cd "$HOME"; git clone https://github.com/matyasselmeci/placement-demo-notebook)
+    (
+        cd "$HOME"
+        git clone https://github.com/matyasselmeci/placement-demo-notebook
+        cd placement-demo-notebook &&
+        cp \
+            demo.ipynb \
+            install-token \
+            test.sub \
+            ..
+    )
 fi
 
